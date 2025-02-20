@@ -135,7 +135,7 @@ class Inimigo:
 class Malenia(Inimigo):
     def __init__(self, nome, vida, ataque, ascii_art):
         super().__init__(nome, vida, ataque, ascii_art)
-        self.segunda_fase = False  # Controla se a segunda fase foi ativada
+        self.segunda_fase = False 
 
     def atacar(self, alvo):
         if self.vida <= self.vida_max * 0.5 and not self.segunda_fase:
@@ -145,7 +145,7 @@ class Malenia(Inimigo):
 
     def ativar_segunda_fase(self, alvo):
         self.segunda_fase = True
-        self.vida = int(self.vida_max * 0.6)  # Recupera um pouco de vida
+        self.vida = int(self.vida_max * 0.6)  
         self.ataque += 5  # Aumenta o ataque
         print(f"\n{Fore.MAGENTA}Malenia se transforma em sua forma verdadeira!")
         print(f"{Fore.RED}Eu sou Malenia, Deusa da Podridão. E agora, você conhecerá o verdadeiro desespero!")
